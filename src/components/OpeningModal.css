@@ -1,0 +1,178 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.4s ease;
+}
+.modal-flyer {
+  background: linear-gradient(135deg, #FFFEF7 0%, #FFF9E6 100%);
+  border-radius: 16px;
+  max-width: 480px;
+  width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+  animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 8px solid var(--color-verde-oscuro);
+}
+.modal-flyer::-webkit-scrollbar { width: 6px; }
+.modal-flyer::-webkit-scrollbar-thumb { background: var(--color-verde-medio); border-radius: 3px; }
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-verde-oscuro);
+  color: var(--color-amarillo);
+  font-size: 22px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.2s;
+  line-height: 1;
+}
+.modal-close:hover { transform: rotate(90deg) scale(1.1); }
+
+.flyer-content {
+  padding: 48px 36px 36px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.flyer-decor {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  opacity: 0.15;
+  pointer-events: none;
+}
+.flyer-decor-tl { top: -40px; left: -40px; background: var(--color-amarillo); }
+.flyer-decor-br { bottom: -40px; right: -40px; background: var(--color-verde-claro); }
+
+.flyer-badge {
+  display: inline-block;
+  background: var(--color-amarillo);
+  color: var(--color-verde-oscuro);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
+}
+
+.flyer-title { margin: 20px 0 16px; position: relative; z-index: 2; }
+.flyer-title-script {
+  display: block;
+  font-family: var(--font-script);
+  font-size: 38px;
+  color: var(--color-verde-medio);
+  font-weight: 500;
+  line-height: 1;
+}
+.flyer-title-main {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 44px;
+  color: var(--color-verde-oscuro);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 4px;
+}
+
+.flyer-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+.flyer-divider span { width: 60px; height: 1px; background: var(--color-verde-medio); opacity: 0.4; }
+
+.flyer-logo {
+  margin: 16px auto;
+  width: 130px;
+  height: 130px;
+  position: relative;
+  z-index: 2;
+}
+.flyer-logo img { width: 100%; height: 100%; object-fit: contain; }
+
+.flyer-foundation {
+  font-family: var(--font-display);
+  font-size: 17px;
+  color: var(--color-verde-oscuro);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.flyer-quote {
+  font-family: var(--font-script);
+  font-size: 20px;
+  color: var(--color-verde-medio);
+  margin-bottom: 24px;
+}
+
+.flyer-info {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 20px 0;
+  border: 1px dashed var(--color-verde-medio);
+}
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 14px;
+}
+.info-item + .info-item { border-top: 1px dashed rgba(46, 125, 50, 0.2); }
+.info-label { color: var(--color-texto-secundario); font-weight: 500; }
+.info-value { color: var(--color-verde-oscuro); font-weight: 600; }
+
+.flyer-cta-text {
+  font-size: 14px;
+  color: var(--color-texto-secundario);
+  line-height: 1.6;
+  margin: 20px 0;
+}
+.flyer-cta-text strong { color: var(--color-verde-oscuro); font-weight: 600; }
+
+.flyer-button {
+  background: var(--color-verde-oscuro);
+  color: var(--color-blanco);
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.25s;
+  position: relative;
+  z-index: 2;
+}
+.flyer-button:hover {
+  background: var(--color-verde-medio);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(27, 94, 32, 0.3);
+}
+
+@media (max-width: 540px) {
+  .flyer-content { padding: 40px 24px 28px; }
+  .flyer-title-main { font-size: 36px; }
+  .flyer-title-script { font-size: 32px; }
+  .flyer-logo { width: 100px; height: 100px; }
+}

@@ -1,0 +1,173 @@
+.donation-section {
+  background: linear-gradient(135deg, #FFFEF7 0%, #FFF9E6 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+.donation-section::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: var(--color-amarillo);
+  border-radius: 50%;
+  opacity: 0.1;
+}
+.donation-section::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 280px;
+  height: 280px;
+  background: var(--color-verde-claro);
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+.donation-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.donation-eyebrow {
+  background: var(--color-verde-suave);
+  padding: 6px 14px;
+  border-radius: 20px;
+  letter-spacing: 1px !important;
+}
+.donation-title { font-size: clamp(28px, 4vw, 44px); margin-bottom: 20px; line-height: 1.15; }
+.donation-title em { font-style: italic; color: var(--color-verde-oscuro); position: relative; }
+.donation-title em::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: var(--color-amarillo);
+  opacity: 0.4;
+  z-index: -1;
+}
+.donation-message {
+  font-size: 17px;
+  color: var(--color-texto-secundario);
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+
+.donation-methods { display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
+.method-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--color-blanco);
+  border-radius: 12px;
+  border: 1px solid var(--color-gris-borde);
+  transition: all 0.25s;
+}
+.method-item:hover { border-color: var(--color-verde-oscuro); transform: translateX(4px); }
+.method-icon {
+  font-size: 24px;
+  width: 44px;
+  height: 44px;
+  background: var(--color-verde-suave);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.method-item strong {
+  display: block;
+  color: var(--color-verde-oscuro);
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+.method-item span { font-size: 13px; color: var(--color-texto-secundario); }
+
+.donation-quote {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-style: italic;
+  color: var(--color-verde-oscuro);
+  padding-left: 16px;
+  border-left: 3px solid var(--color-amarillo);
+  line-height: 1.5;
+}
+
+/* Tarjeta QR estilo "Paga aquí" oficial (fondo oscuro como el flyer) */
+.donation-qr-card {
+  background: #1a1a1a;
+  border-radius: 24px;
+  padding: 36px 28px 28px;
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+}
+
+.qr-header { margin-bottom: 24px; }
+.qr-header h3 {
+  font-family: var(--font-body);
+  font-size: 38px;
+  color: var(--color-blanco);
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 4px;
+}
+.qr-header p { font-size: 14px; color: rgba(255, 255, 255, 0.7); }
+
+.qr-image-wrapper {
+  background: var(--color-blanco);
+  border-radius: 16px;
+  padding: 12px;
+  margin: 0 auto 20px;
+  max-width: 300px;
+  overflow: hidden;
+}
+.qr-image-wrapper img { width: 100%; height: auto; display: block; border-radius: 8px; }
+
+.qr-llave {
+  background: var(--color-blanco);
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+.qr-llave strong { color: #1a1a1a; font-weight: 700; }
+
+.qr-banks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.bank-breb {
+  font-weight: 700;
+  font-size: 22px;
+  color: #2fe6b8;
+  font-style: italic;
+}
+.bank-divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.3);
+}
+.bank-bancolombia {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-blanco);
+}
+
+@media (max-width: 960px) {
+  .donation-grid { grid-template-columns: 1fr; gap: 48px; }
+  .donation-qr-card { max-width: 400px; margin: 0 auto; }
+}
