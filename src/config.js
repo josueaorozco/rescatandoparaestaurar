@@ -17,8 +17,8 @@ export const SITE_CONFIG = {
 
   // 🔗 Redes sociales - ⚠️ CAMBIAR cuando las tengas
   redes: {
-    facebook: "https://www.facebook.com/share/1aAMDMSWaM/",
-    instagram: "https://instagram.com/tu-cuenta",
+    facebook: "https://www.facebook.com/share/17w7TGTGTV/",
+    instagram: "https://www.instagram.com/fundrescatandopararestaurar?igsh=OWVxNXNvMjNtMnFt",
     youtube: "https://youtube.com/@tu-canal",
     tiktok: "https://tiktok.com/@tu-cuenta"
   },
