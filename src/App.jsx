@@ -1,0 +1,49 @@
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import ScrollToTop from './components/ScrollToTop'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import WhatsAppFloat from './components/WhatsAppFloat'
+import OpeningModal from './components/OpeningModal'
+import DonationModal from './components/DonationModal'
+import Home from './pages/Home'
+import About from './pages/About'
+import Activities from './pages/Activities'
+import Contact from './pages/Contact'
+import { DonationContext } from './DonationContext'
+
+function App() {
+  const [showModal, setShowModal] = useState(false)
+  const [showDonationModal, setShowDonationModal] = useState(false)
+  const location = useLocation()
+
+  useEffect(() => {
+    if (location.pathname === '/') {
+      const timer = setTimeout(() => {
+        setShowModal(true)
+      }, 1200)
+      return () => clearTimeout(timer)
+    }
+  }, [location.pathname])
+
+  return (
+    <DonationContext.Provider value={() => setShowDonationModal(true)}>
+      <ScrollToTop />
+      {showModal && <OpeningModal onClose={() => setShowModal(false)} />}
+      {showDonationModal && <DonationModal onClose={() => setShowDonationModal(false)} />}
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/nosotros" element={<About />} />
+          <Route path="/actividades" element={<Activities />} />
+          <Route path="/contacto" element={<Contact />} />
+        </Routes>
+      </main>
+      <Footer />
+      <WhatsAppFloat />
+    </DonationContext.Provider>
+  )
+}
+
+export default App
