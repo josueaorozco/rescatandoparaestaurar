@@ -1,0 +1,106 @@
+.testimonios-section { padding: 100px 0; }
+
+.testimonios-intro {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 64px;
+}
+.testimonios-sub {
+  font-size: 17px;
+  color: var(--color-texto-secundario);
+  line-height: 1.7;
+  margin-top: 16px;
+}
+
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 36px;
+  justify-items: center;
+}
+
+.testimonio-card {
+  background: var(--color-blanco);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(27, 94, 32, 0.12);
+  border: 1px solid rgba(27, 94, 32, 0.1);
+  transition: all 0.3s;
+  width: 100%;
+  max-width: 600px;
+  padding: 28px;
+}
+.testimonio-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(27, 94, 32, 0.18); }
+
+.testimonio-badge {
+  display: inline-block;
+  background: rgba(27, 94, 32, 0.1);
+  color: var(--color-verde-oscuro);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+.testimonio-titulo {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-verde-oscuro);
+  margin-bottom: 8px;
+  font-family: var(--font-display);
+}
+.testimonio-desc {
+  font-size: 15px;
+  color: var(--color-texto-secundario);
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.testimonio-fb-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f0f0f0;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonio-fb-wrapper .fb-video {
+  width: 100% !important;
+}
+.testimonio-fb-wrapper .fb-video span,
+.testimonio-fb-wrapper .fb-video iframe {
+  width: 100% !important;
+}
+
+.testimonios-cta {
+  margin-top: 80px;
+  text-align: center;
+  background: linear-gradient(135deg, #f0faf0, #e8f5e9);
+  border-radius: 24px;
+  padding: 56px 40px;
+  border: 1px dashed rgba(27, 94, 32, 0.3);
+}
+.testimonios-cta-icon { font-size: 48px; margin-bottom: 16px; }
+.testimonios-cta h3 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: var(--color-verde-oscuro);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.testimonios-cta p {
+  font-size: 16px;
+  color: var(--color-texto-secundario);
+  max-width: 480px;
+  margin: 0 auto 28px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .testimonios-grid { grid-template-columns: 1fr; }
+  .testimonios-cta { padding: 40px 24px; }
+  .testimonios-cta h3 { font-size: 22px; }
+  .testimonio-preview { height: 200px; }
+}

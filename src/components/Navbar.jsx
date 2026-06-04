@@ -37,6 +37,7 @@ export default function Navbar() {
           <NavLink to="/" end onClick={() => setMenuOpen(false)}>Inicio</NavLink>
           <NavLink to="/nosotros" onClick={() => setMenuOpen(false)}>Nosotros</NavLink>
           <NavLink to="/actividades" onClick={() => setMenuOpen(false)}>Actividades</NavLink>
+          <NavLink to="/testimonios" onClick={() => setMenuOpen(false)}>Testimonios</NavLink>
           <NavLink to="/contacto" onClick={() => setMenuOpen(false)}>Contacto</NavLink>
           <button className="nav-cta" onClick={() => { openDonation(); setMenuOpen(false) }}>
             Donar ♥

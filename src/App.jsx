@@ -9,6 +9,7 @@ import DonationModal from './components/DonationModal'
 import Home from './pages/Home'
 import About from './pages/About'
 import Activities from './pages/Activities'
+import Testimonios from './pages/Testimonios'
 import Contact from './pages/Contact'
 import { DonationContext } from './DonationContext'
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/nosotros" element={<About />} />
           <Route path="/actividades" element={<Activities />} />
+          <Route path="/testimonios" element={<Testimonios />} />
           <Route path="/contacto" element={<Contact />} />
         </Routes>
       </main>
