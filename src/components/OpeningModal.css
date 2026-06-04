@@ -129,20 +129,47 @@
 .flyer-info {
   background: rgba(255, 255, 255, 0.7);
   border-radius: 12px;
-  padding: 16px;
+  padding: 16px 20px;
   margin: 20px 0;
   border: 1px dashed var(--color-verde-medio);
-}
-.info-item {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  font-size: 17px;
+  flex-direction: column;
+  gap: 0;
 }
-.info-item + .info-item { border-top: 1px dashed rgba(46, 125, 50, 0.2); }
-.info-label { color: var(--color-texto-secundario); font-weight: 500; }
-.info-value { color: var(--color-verde-oscuro); font-weight: 600; }
+
+.flyer-evento { padding: 12px 0; }
+.flyer-evento-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-verde-oscuro);
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+}
+.flyer-evento-rows { display: flex; flex-direction: column; gap: 6px; }
+.flyer-evento-row {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  align-items: baseline;
+}
+.flyer-evento-label {
+  color: var(--color-texto-secundario);
+  font-weight: 500;
+  min-width: 72px;
+  flex-shrink: 0;
+}
+.flyer-evento-label::after { content: ":"; }
+.flyer-evento-val {
+  color: var(--color-verde-oscuro);
+  font-weight: 600;
+  text-align: left;
+}
+
+.flyer-evento-divider {
+  height: 1px;
+  background: rgba(46, 125, 50, 0.2);
+  margin: 4px 0;
+}
 
 .flyer-cta-text {
   font-size: 14px;

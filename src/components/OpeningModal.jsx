@@ -44,17 +44,42 @@ export default function OpeningModal({ onClose }) {
           <p className="flyer-quote">"Una nueva vida puede ser posible"</p>
 
           <div className="flyer-info">
-            <div className="info-item">
-              <span className="info-label">🏛️ Apertura</span>
-              <span className="info-value">12 de junio · Auditorio Comfacesar</span>
+            <div className="flyer-evento">
+              <div className="flyer-evento-title">🏛️ Apertura</div>
+              <div className="flyer-evento-rows">
+                <div className="flyer-evento-row">
+                  <span className="flyer-evento-label">Dónde</span>
+                  <span className="flyer-evento-val">Auditorio Comfacesar</span>
+                </div>
+                <div className="flyer-evento-row">
+                  <span className="flyer-evento-label">Cuándo</span>
+                  <span className="flyer-evento-val">12 de junio</span>
+                </div>
+                <div className="flyer-evento-row">
+                  <span className="flyer-evento-label">Dirección</span>
+                  <span className="flyer-evento-val">Calle 5 # 26-16, Aguachica, Cesar</span>
+                </div>
+              </div>
             </div>
-            <div className="info-item">
-              <span className="info-label">🎉 Donatón</span>
-              <span className="info-value">13 de junio · 9:00 am - 4:00 pm</span>
-            </div>
-            <div className="info-item">
-              <span className="info-label">📍 Dónde</span>
-              <span className="info-value">Parque principal San Roque</span>
+
+            <div className="flyer-evento-divider"></div>
+
+            <div className="flyer-evento">
+              <div className="flyer-evento-title">🎉 Donatón</div>
+              <div className="flyer-evento-rows">
+                <div className="flyer-evento-row">
+                  <span className="flyer-evento-label">Dónde</span>
+                  <span className="flyer-evento-val">Parque principal San Roque</span>
+                </div>
+                <div className="flyer-evento-row">
+                  <span className="flyer-evento-label">Cuándo</span>
+                  <span className="flyer-evento-val">13 de junio · 9:00 am - 4:00 pm</span>
+                </div>
+                <div className="flyer-evento-row">
+                  <span className="flyer-evento-label">Dirección</span>
+                  <span className="flyer-evento-val">Calle 3 # 32-35, Aguachica</span>
+                </div>
+              </div>
             </div>
           </div>
 
