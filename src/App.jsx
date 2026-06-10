@@ -11,6 +11,7 @@ import About from './pages/About'
 import Activities from './pages/Activities'
 import Testimonios from './pages/Testimonios'
 import Contact from './pages/Contact'
+import Docs from './pages/Docs'
 import { DonationContext } from './DonationContext'
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
           <Route path="/actividades" element={<Activities />} />
           <Route path="/testimonios" element={<Testimonios />} />
           <Route path="/contacto" element={<Contact />} />
+          <Route path="/documentos-institucionales-frpr/:docKey" element={<Docs />} />
         </Routes>
       </main>
       <Footer />
