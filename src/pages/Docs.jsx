@@ -5,14 +5,14 @@ const documentos = {
   acta: {
     titulo: "Acta de Constitución",
     descripcion: "Documento oficial de constitución de la Fundación Rescatando para Restaurar.",
-    archivo: "/docs/ACTA DE CONSTITUCION - FRPR rescatando para restaurar.doc",
-    tipo: "DOC"
+    archivo: "/docs/acta-constitucion-frpr.pdf",
+    tipo: "PDF"
   },
   estatutos: {
     titulo: "Estatutos de la Fundación",
     descripcion: "Estatutos y reglamento interno de la Fundación Rescatando para Restaurar.",
-    archivo: "/docs/ESTATUTO - FRPR rescatando para restaurar.doc",
-    tipo: "DOC"
+    archivo: "/docs/estatutos-frpr.pdf",
+    tipo: "PDF"
   }
 }
 
